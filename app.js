@@ -105,20 +105,20 @@ gameClock = () => {
 
 				localStorage.setItem("playerRecentScore", score)
 			}
-	\u{ 1F499 }
-	timeClock.innerText = "0";
 
-	// set time out 
-	setTimeout(() => {
-		timeClock.innerText = "Game Over ";
-	}, 2000)
-	// stop timer
-	clearInterval(gameStartClock);
-	// local storage set score
-	localStorage.setItem("playerRecentScore", score);
-	// navigate page to end html
-	return window.location.assign("./end.html");
-};
+			timeClock.innerText = "0";
+
+			// set time out 
+			setTimeout(() => {
+				timeClock.innerText = "Game Over ";
+			}, 2000)
+			// stop timer
+			clearInterval(gameStartClock);
+			// local storage set score
+			localStorage.setItem("playerRecentScore", score);
+			// navigate page to end html
+			return window.location.assign("./end.html");
+		};
 	}, 1000)
 };
 

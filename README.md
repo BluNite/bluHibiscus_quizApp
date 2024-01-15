@@ -6,7 +6,7 @@ A quiz application that uses the opendb quiz api to generate multiple choice que
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)[![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://github.com/jamesqquick)
 ![badge: W3schools](https://img.shields.io/badge/W3Schools-04AA6D.svg?style=for-the-badge&logo=W3Schools&logoColor=white)![badge: stackoverflow](https://img.shields.io/badge/Stack%20Overflow-F58025.svg?style=for-the-badge&logo=Stack-Overflow&logoColor=white)![badge: js](https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black)![badge:css](https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white)![badge:html](https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white)![badge:github](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white)
 
-[A deployed version can be viewed here.]()
+[A deployed version can be viewed here.](https://blunite.github.io/bluHibiscus_quizApp/)
 
 ---
 

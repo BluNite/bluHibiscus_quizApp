@@ -1,0 +1,34 @@
+[
+  {
+    "question": "JavaScript is  a _________ language",
+    "choice1": "zero-indexed",
+    "choice2": "3d-indexed",
+    "choice3": "4-indexed",
+    "choice4": "2-indexed",
+    "answer": 1
+  },
+  {
+    "question": "What percentage of websites use JavasScript for client-side scripting?",
+    "choice1": "25%",
+    "choice2": "45%",
+    "choice3": "98%",
+    "choice4": "73%",
+    "answer": 3
+  },
+  {
+    "question": "Like other scripting languages, JavaScript is ' ________________' typed",
+    "choice1": "never",
+    "choice2": "dynamically",
+    "choice3": "array",
+    "choice4": "boolean",
+    "answer": 2
+  },
+  {
+    "question": "Which choice is a JavaScript variable declaration",
+    "choice1": "Var",
+    "choice2": "Const",
+    "choice3": "Let",
+    "choice4": "all of the above",
+    "answer": 4
+  }
+]

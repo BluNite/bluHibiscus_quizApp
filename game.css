@@ -1,0 +1,156 @@
+/* container*/
+
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  flex: 100%;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+/* choice container classes */
+
+.choice-container {
+  margin: 0 auto;
+  min-height: 100vh;
+  flex: 100%;
+  flex-direction: column;
+  min-width: 100vw;
+}
+
+/* choice display flex margin bottom font size */
+
+.choiceDisplay {
+  margin: 0 auto;
+  display: flex;
+  width: 50vw;
+  font-size: 1.8rem;
+  color: whitesmoke;
+  border: 0.1rem solid rgba(88, 170, 242, 0.25);
+  background-color: rgb(35, 101, 139);
+  position: relative;
+}
+
+/* classes for incorrect, correct red and green */
+.incorrect {
+  background-color: red;
+  color: white;
+}
+.correct {
+  background-color: rgb(17, 237, 17);
+  color: white;
+}
+
+/* questions text ratio */
+#track {
+  color: #56ade8;
+  font-size: 2rem;
+  font-weight: 600;
+  position: relative;
+}
+/* outer bar  */
+#trackProgress {
+  width: 20rem;
+  height: 4rem;
+  border: 0.4rem solid #3393e7;
+  margin-top: 0.5rem;
+}
+/* title  */
+
+#trackTitle {
+  color: #56ade8;
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0 auto;
+}
+/* inner bar - full */
+#progressBarFull {
+  height: 3.2rem;
+  background-color: #21f11d;
+  width: 0%;
+}
+
+#playerDisplay {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* class for timer settings   */
+.timesec {
+  height: 10rem;
+
+  width: 15rem;
+}
+/*score title, and text */
+.scoreTitle {
+  font-weight: 600;
+  color: #56ade8;
+  font-size: 2rem;
+  text-align: center;
+
+  height: 7rem;
+  width: 9rem;
+  margin-left: 1rem;
+}
+
+#scoreId {
+  text-align: center;
+  font-weight: 600;
+}
+
+#timeText {
+  color: #d2dee9;
+}
+/* h3 text color*/
+h3 {
+  color: #56ade8;
+}
+/* .col-12*/
+.col-12 {
+  height: 28rem;
+}
+
+/*player answer response */
+.userSection {
+  background-color: transparent;
+  color: #f8fbfd;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/* hover   */
+.choiceDisplay:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(4, 32, 47, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+/* choice prefix letter */
+.choiceLetter {
+  padding: 1.5rem 2.5rem;
+  background-color: rgb(11, 133, 209);
+  color: white;
+}
+
+#quiz-questions {
+  font-size: 2rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+/* choice text padding*/
+.choiceText {
+  padding: 1.5rem;
+  font-weight: 600;
+  color: rgb(225, 229, 232);
+}
+/*choice hover*/
+.choiceText:hover {
+  color: rgb(221, 221, 10);
+}
+/* image set height width smaller than in main section*/
+img {
+  width: 4rem;
+  height: 4rem;
+}

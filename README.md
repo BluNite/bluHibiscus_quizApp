@@ -59,7 +59,8 @@ THEN I can save my player name and my score
 
 ## Visuals:
 
-![]()
+![image-index](assets/blu_hibiscus_index_html.jpg)
+![image-game](assets/blu_hibiscus_game_js.png)
 
 ---
 

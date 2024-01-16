@@ -154,3 +154,17 @@ img {
   width: 4rem;
   height: 4rem;
 }
+
+/*spinner*/
+
+#spinner {
+  border: 1.6rem solid white;
+  border-radius: 50%;
+  border-top: 1.6rem solid #3393e7;
+  width: 12rem;
+  height: 12rem;
+}
+  
+
+
+}

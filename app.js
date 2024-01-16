@@ -67,17 +67,26 @@ let questions = [];
 	}
 ];
 /*/
+
+// fetch json questions
 fetch('questions.json')
 	.then((res) => {
 		return res.json();
 	})
+	// dataLoaded
 	.then((dataLoaded) => {
+		// questions[] add dataLoaded
 		questions = dataLoaded;
+		// invoke start game
 		startGame();
 	})
+	// catch cb
 	.catch((err) => {
+		// console error if fetch fails
 		console.error(err);
 	})
+
+
 // func() starts quiz
 startGame = () => {
 	// set alloted time for quiz

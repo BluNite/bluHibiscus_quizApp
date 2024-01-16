@@ -85,17 +85,20 @@ fetch('https://opentdb.com/api.php?amount=10&category=9&type=multiple')
 			};
 			// incorrect answers from dataBase
 			const answersLoaded = [...dataLoaded.incorrect_answers];
-			//
-			questionsDataLoaded.answer = Math.floor(Math.random() * 3) + 1;
+			// answer is random num 
+			questionsDataLoaded.answer = Math.floor(Math.random() * 4) + 1;
+			// added to incorrect answers using splice method
 			answersLoaded.splice(
 				questionsDataLoaded.answer - 1,
 				0,
 				dataLoaded.correct_answer
 
 			);
+			// each choice is assigned index
 			answersLoaded.forEach((choice, index) => {
 				questionsDataLoaded[('choice' + (index + 1))] = choice;
 			});
+			//questions obj
 			return questionsDataLoaded;
 		})
 		// invoke start game

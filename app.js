@@ -2,8 +2,8 @@
 /*/Sound Effect by <a href="https://pixabay.com/users/floraphonic-38928062/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=181415">floraphonic</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=181415">Pixabay</a> */
 const questionsEl = document.getElementById('quiz-questions');
 const choiceEl = Array.from(document.getElementsByClassName('choiceText'));
-const soundIncorrect = new Audio("/assets/buzzer-2-181415.mp3");
-const soundCorrect = new Audio("/assets/correct-156911.mp3");
+const soundIncorrect = new Audio("assets/buzzer-2-181415.mp3");
+const soundCorrect = new Audio("assets/correct-156911.mp3");
 const timerText = document.getElementById('timeText');
 const track = document.getElementById('track');
 // maximum questions var
@@ -68,15 +68,36 @@ let questions = [];
 ];
 /*/
 
-// fetch json questions
-fetch('questions.json')
+// fetch  opentdb api
+fetch('https://opentdb.com/api.php?amount=10&category=9&type=multiple')
 	.then((res) => {
 		return res.json();
+		console.log(response)
 	})
 	// dataLoaded
 	.then((dataLoaded) => {
-		// questions[] add dataLoaded
-		questions = dataLoaded;
+		// questions[] add dataLoaded and loop through questions
+		questions = dataLoaded.results.map((dataLoaded) => {
+			// loaded questions array
+			const questionsDataLoaded = {
+				// assign question to dataBase question
+				question: dataLoaded.question,
+			};
+			// incorrect answers from dataBase
+			const answersLoaded = [...dataLoaded.incorrect_answers];
+			//
+			questionsDataLoaded.answer = Math.floor(Math.random() * 3) + 1;
+			answersLoaded.splice(
+				questionsDataLoaded.answer - 1,
+				0,
+				dataLoaded.correct_answer
+
+			);
+			answersLoaded.forEach((choice, index) => {
+				questionsDataLoaded[('choice' + (index + 1))] = choice;
+			});
+			return questionsDataLoaded;
+		})
 		// invoke start game
 		startGame();
 	})
@@ -124,10 +145,9 @@ gameClock = () => {
 				// stop timer
 				clearInterval(gameStartClock);
 				// local storage set score
-
 				localStorage.setItem("playerRecentScore", score)
 			}
-
+			// clock text = 0
 			timeClock.innerText = "0";
 
 			// set time out 
@@ -139,7 +159,7 @@ gameClock = () => {
 			// local storage set score
 			localStorage.setItem("playerRecentScore", score);
 			// navigate page to end html
-			return window.location.assign("./end.html");
+			return window.location.assign("end.html");
 		};
 	}, 1000)
 };

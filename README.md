@@ -1,6 +1,6 @@
 # bluHibiscus_quizApp
 
-A quiz application that uses the opendb quiz api to generate multiple choice questions and answers.
+A quiz application that uses the opentdb quiz api to generate multiple choice questions and answers.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)[![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://github.com/jamesqquick)
@@ -99,6 +99,12 @@ Following a code review, your feature will be merged.
 ---
 
 ## Tests:
+
+---
+---
+## Challenges and Issues:
+
+atob() for encoding to html  will eliminate symbols, and spinner is needed for api load time and blank space when loading to html
 
 ---
 

@@ -28,8 +28,10 @@ let addPoints = 10;
 let subPoints = -4;
 // submit answers will be test for value t/f 
 let answerSubmitOn = true;
+// questions var empty bracket
+let questions = [];
 // questions object/array hard coded for development purposes
-let questions = [
+/*/let questions = [
 
 	{
 		question: "JavaScript is  a _________ language",
@@ -64,7 +66,18 @@ let questions = [
 		answer: 4
 	}
 ];
-
+/*/
+fetch('questions.json')
+	.then((res) => {
+		return res.json();
+	})
+	.then((dataLoaded) => {
+		questions = dataLoaded;
+		startGame();
+	})
+	.catch((err) => {
+		console.error(err);
+	})
 // func() starts quiz
 startGame = () => {
 	// set alloted time for quiz
@@ -255,8 +268,7 @@ bonusFunc = (num) => {
 	scoreId.innerHTML = score
 };
 
-// invoke start()
-startGame();
+
 
 
 

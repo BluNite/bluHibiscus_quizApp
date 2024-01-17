@@ -1,11 +1,19 @@
 //variables for html elements questions for quiz and choices*/
 /*/Sound Effect by <a href="https://pixabay.com/users/floraphonic-38928062/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=181415">floraphonic</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=181415">Pixabay</a> */
+// variables
+//questions el
 const questionsEl = document.getElementById('quiz-questions');
+//choices class el array constructor 
 const choiceEl = Array.from(document.getElementsByClassName('choiceText'));
+// sounds
 const soundIncorrect = new Audio("assets/buzzer-2-181415.mp3");
 const soundCorrect = new Audio("assets/correct-156911.mp3");
+// timer text el
 const timerText = document.getElementById('timeText');
+//  track questions 
 const track = document.getElementById('track');
+// spinner e;
+const spinner = document.getElementById('spinner');
 // maximum questions var
 const MAXIMUM_QUES_ALLOW = 4;
 // empty brackets for the questions object 
@@ -98,7 +106,7 @@ fetch('https://opentdb.com/api.php?amount=10&category=9&type=multiple')
 			answersLoaded.forEach((choice, index) => {
 				questionsDataLoaded[('choice' + (index + 1))] = choice;
 			});
-			//questions obj
+			//questions obj returned 
 			return questionsDataLoaded;
 		})
 		// invoke start game
@@ -125,6 +133,7 @@ startGame = () => {
 	loadNextQuest();
 	// invoke quiz timer
 	gameClock();
+
 
 };
 
@@ -294,9 +303,10 @@ bonusFunc = (num) => {
 	} else {
 		// if score is 40 and higher add 20 points
 		if (num >= 40) {
-			score += 10;
+			score += 5;
 		}
 	}
+	// add score to el text
 	scoreId.innerHTML = score
 };
 

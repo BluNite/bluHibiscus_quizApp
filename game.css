@@ -155,7 +155,7 @@ img {
   height: 4rem;
 }
 
-/*spinner*/
+/*spinner boreder radius is 50% */
 
 #spinner {
   border: 1.6rem solid white;
@@ -164,7 +164,12 @@ img {
   width: 12rem;
   height: 12rem;
 }
-  
 
-
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

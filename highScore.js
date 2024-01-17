@@ -9,7 +9,7 @@ const clearBtn = document.getElementById("clearBtnId");
 highScoresRated.innerHTML = highScores
 	.map(score => {
 		// list element class highScoreClass text username - score 
-		return `<li class="highScoreClass">${score.userName} - ${score.score}</li>`
+		return `<li class="highScoreClass">${score.userName} :   ${score.score}</li>`
 	})// important  remember to join array with ""
 	.join("");
 

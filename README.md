@@ -29,7 +29,7 @@ A quiz application that uses the opentdb quiz api to generate multiple choice qu
 
 ## About
 
-The quiz application is timed and presents the user with random multiple choice questions and answers. A response of "Correct" or "Incorrect" is thrown with alerts and a change in the choice background to reflect the users answer choice. High scores rated can be tracked after the user enters a name. Scores are tracked using local storage web api.
+The quiz application is timed and presents the user with random multiple-choice questions and answers. A response of "Correct" or "Incorrect" is thrown with alerts and a change in the choice background to reflect the user's answer choice. High scores rated can be tracked after the user enters a name. Scores are tracked using local storage web API.
 
 ---
 
@@ -49,8 +49,8 @@ Then a timer starts and I am given a set of questions and choices
 WHEN I answer a question
 THEN another question is shown
 When I choose the wrong answer
-THEN time is taken subtracted from timer/clock
-WHEN questions answered is complete or timer is 0
+THEN time is taken and subtracted from the timer/clock
+WHEN questions answered is complete or the timer is 0
 THEN the game is over
 WHEN the game is over
 THEN I can save my player name and my score
@@ -104,18 +104,18 @@ Following a code review, your feature will be merged.
 ---
 ## Challenges and Issues:
 
-I researched encoding/decoding of strings. W3 schools, Mozilla, and GitHub repos with this issue helped me to understand this problem in front-end development.
-I might change the api encoding, configuration is presently for base64 encoding. Actually, it saved me  a few line of codes.. I didn't need to call the btoa() func to encode to base64.  Atob() and btoa() is to decode and encode base64 only... atob() stands for ASCII to base64 and base64 to ASCII btoa(). For now this works, but ASCII is limited in producing certain characters to string. But an improvement is noted.
+I researched the encoding/decoding of strings. Sources searched were: Stack Overflow, W3 schools, Mozilla, and GitHub repos with this issue helped me to understand this problem in front-end development.
+I might change the api encoding, the configuration is presently set for base64 encoding. It saved me a few lines of code doing this... I didn't need to call the btoa() function to encode to base64, and then to atob() to decode the string.  Atob() and btoa() is to decode and encode base64 only... atob() stands for ASCII to base64 and base64 to ASCII btoa(). For now this works, but ASCII is limited in producing certain characters to string. But an improvement is noted.
 
 ---
 
 ## Authors and Acknowledgments
 
 Nkenge Crowe (bluNite)
-
+Trilogy 
 James Quick https://github.com/jamesqquick
 Build a Quiz App https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript
-GitHub.com open source quiz projects (open-source examples of quiz applications)
+GitHub.com open-source quiz projects (open-source examples of quiz applications)
 
 ---
 

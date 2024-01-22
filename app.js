@@ -5,6 +5,9 @@
 const questionsEl = document.getElementById('quiz-questions');
 //choices class el array constructor 
 const choiceEl = Array.from(document.getElementsByClassName('choiceText'));
+
+
+const fetchButton = document.getElementById('fetchButton')
 // sounds
 const soundIncorrect = new Audio("assets/buzzer-2-181415.mp3");
 const soundCorrect = new Audio("assets/correct-156911.mp3");
@@ -12,8 +15,10 @@ const soundCorrect = new Audio("assets/correct-156911.mp3");
 const timerText = document.getElementById('timeText');
 //  track questions 
 const track = document.getElementById('track');
-// spinner e;
+// spinner el;
 const spinner = document.getElementById('spinner');
+// quizBox el
+const quizBox = document.getElementById('quizBox');
 // maximum questions var
 const MAXIMUM_QUES_ALLOW = 4;
 // empty brackets for the questions object 
@@ -76,20 +81,32 @@ let questions = [];
 ];
 /*/
 
-// fetch  opentdb api
-fetch('https://opentdb.com/api.php?amount=10&category=9&type=multiple')
+
+fetch('https://opentdb.com/api.php?amount=10&category=9&type=multiple&encode=base64')
+
+
 	.then((res) => {
+
 		return res.json();
-		console.log(response)
+
 	})
 	// dataLoaded
 	.then((dataLoaded) => {
+
+
+
 		// questions[] add dataLoaded and loop through questions
 		questions = dataLoaded.results.map((dataLoaded) => {
-			// loaded questions array
+			// log to check object
+			console.log(dataLoaded.question)
+			// use window.atob() to decode string obj. 
+			let decodedQuestion = window.atob(dataLoaded.question);
+			// check in console
+			console.log(decodedQuestion)
+			// loaded questions array property question is decoded
 			const questionsDataLoaded = {
 				// assign question to dataBase question
-				question: dataLoaded.question,
+				question: decodedQuestion
 			};
 			// incorrect answers from dataBase
 			const answersLoaded = [...dataLoaded.incorrect_answers];
@@ -102,9 +119,15 @@ fetch('https://opentdb.com/api.php?amount=10&category=9&type=multiple')
 				dataLoaded.correct_answer
 
 			);
+			console.log(answersLoaded)
+			//try here atob() for answersLoaded 
+
 			// each choice is assigned index
 			answersLoaded.forEach((choice, index) => {
-				questionsDataLoaded[('choice' + (index + 1))] = choice;
+				// atob() func for each 'choice' 
+				let decodedAnswer = window.atob(choice);
+				// questions data loaded + 'choice' + 'index#' = the decoded choice /user answer selected
+				questionsDataLoaded[('choice' + (index + 1))] = decodedAnswer;
 			});
 			//questions obj returned 
 			return questionsDataLoaded;
@@ -119,6 +142,8 @@ fetch('https://opentdb.com/api.php?amount=10&category=9&type=multiple')
 	})
 
 
+
+
 // func() starts quiz
 startGame = () => {
 	// set alloted time for quiz
@@ -131,8 +156,14 @@ startGame = () => {
 	questionQuery = [...questions];
 	// call next question
 	loadNextQuest();
-	// invoke quiz timer
 	gameClock();
+
+	// invoke quiz timer
+
+
+
+
+
 
 
 };
@@ -188,6 +219,7 @@ loadNextQuest = () => {
 
 	};
 
+
 	// current question index adds one
 	questionCountIndex++;
 	// a var for random index current questions
@@ -204,10 +236,12 @@ loadNextQuest = () => {
 	// choices each assigned data-number text is looped through choiceEl array showing choice in html
 	// forEach func for choice array
 	choiceEl.forEach((choice) => {
+
+
 		// dataNumber var to get data-number for each choice
 		const dataNumber = choice.dataset['number'];
 		// choice element text = quiz choices 'choice1' 
-		choice.innerText = currentQueStack['choice' + dataNumber];
+		choice.innerHTML = currentQueStack['choice' + dataNumber];
 	});
 
 	// remove the last question/ choice from array stack

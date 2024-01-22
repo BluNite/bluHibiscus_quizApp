@@ -158,11 +158,14 @@ img {
 /*spinner boreder radius is 50% */
 
 #spinner {
-  border: 1.6rem solid white;
+  border: 1.6rem solid rgb(165, 189, 232);
   border-radius: 50%;
   border-top: 1.6rem solid #3393e7;
   width: 12rem;
   height: 12rem;
+  animation: spin 2s linear infinite;
+  align-content: center;
+  margin-top: 23rem;
 }
 
 @keyframes spin {

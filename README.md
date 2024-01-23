@@ -111,7 +111,7 @@ I might change the api encoding, the configuration is presently set for base64 e
 
 ## Authors and Acknowledgments
 
- - Nkenge Crowe (bluNite)
+ - Made with :heart: by Nkenge Crowe (bluNite)
 - Trilogy 
 - James Quick https://github.com/jamesqquick
 Build a Quiz App https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript

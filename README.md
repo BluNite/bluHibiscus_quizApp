@@ -105,7 +105,7 @@ Following a code review, your feature will be merged.
 ## Challenges and Issues:
 
 I researched the encoding/decoding of strings. Sources searched were: Stack Overflow, W3 schools, Mozilla, and GitHub repos with this issue helped me to understand this problem in front-end development.
-I might change the api encoding, the configuration is presently set for base64 encoding. It saved me a few lines of code doing this... I didn't need to call the btoa() function to encode to base64, and then to atob() to decode the string.  Atob() and btoa() is to decode and encode base64 only... atob() stands for ASCII to base64 and base64 to ASCII btoa(). For now this works, but ASCII is limited in producing certain characters to string. But an improvement is noted.
+I might change the api encoding, the configuration is presently set for base64 encoding. It saved me a few lines of code doing this... I didn't need to call the btoa() function to encode to base64, and then to atob() to decode the string.  Atob() and btoa() is to decode and encode base64 only... atob() stands for ASCII to base64 and base64 to ASCII btoa(). For now this works, but ASCII is limited in producing certain characters to string however, an improvement is noted.
 
 ---
 

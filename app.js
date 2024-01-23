@@ -86,15 +86,10 @@ fetch('https://opentdb.com/api.php?amount=10&category=9&type=multiple&encode=bas
 
 
 	.then((res) => {
-
 		return res.json();
-
 	})
 	// dataLoaded
 	.then((dataLoaded) => {
-
-
-
 		// questions[] add dataLoaded and loop through questions
 		questions = dataLoaded.results.map((dataLoaded) => {
 			// log to check object
@@ -141,9 +136,6 @@ fetch('https://opentdb.com/api.php?amount=10&category=9&type=multiple&encode=bas
 		console.error(err);
 	})
 
-
-
-
 // func() starts quiz
 startGame = () => {
 	// set alloted time for quiz
@@ -157,15 +149,6 @@ startGame = () => {
 	// call next question
 	loadNextQuest();
 	gameClock();
-
-	// invoke quiz timer
-
-
-
-
-
-
-
 };
 
 // quiz time func()

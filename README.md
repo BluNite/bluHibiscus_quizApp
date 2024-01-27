@@ -17,13 +17,15 @@ A quiz application that uses the opentdb quiz api to generate multiple choice qu
   - [About](#about)
   - [User Story](#user-story)
   - [Acceptance Criteria](#acceptance-criteria)
-  - [Visuals:](#visuals)
-  - [Installation:](#installation)
+  - [Visuals](#visuals)
+  - [Installation](#installation)
   - [License](#license)
-  - [Contributing:](#contributing)
-  - [Tests:](#tests)
-  - [Authors and Acknowledgments](#authors-and-acknowledgments)
-  - [Contact Information:](#contact-information)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Challenges and Issue](#challenges-and-issue)
+  - [Authors](#authors)
+    - [Acknowledgements](#acknowledgements)
+  - [Contact Information](#contact-information)
 
 ---
 
@@ -57,14 +59,14 @@ THEN I can save my player name and my score
 
 ---
 
-## Visuals:
+## Visuals
 
 ![image-index](assets/blu_hibiscus_index_html.jpg)
 ![image-game](assets/blu_hibiscus_game_js.png)
 
 ---
 
-## Installation:
+## Installation
 
 Go to GitHub.com and navigate to the main page of the repository. Then, click <> CODE, above the list of list of files. Then, copy the URL for the repository. Click the applicable clipboard for, HTTPS, SSH, or GitHub CLI. THEN, open Git Bash, and change the current working directory to the location where you want the cloned directory. THEN, type [git clone]. Then, paste the URL you copied [git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY]. THEN, press enter to create your local clone.
 
@@ -83,7 +85,7 @@ License used for this project - MIT
 
 ---
 
-## Contributing:
+## Contributing
 
 To contribute to this application, create a pull request.
 Here are the steps needed for doing that:
@@ -98,28 +100,33 @@ Following a code review, your feature will be merged.
 
 ---
 
-## Tests:
+## Tests
 
 ---
+
+## Challenges and Issue
+
 ---
-## Challenges and Issues:
 
 I researched the encoding/decoding of strings. Sources searched were: Stack Overflow, W3 schools, Mozilla, and GitHub repos with this issue helped me to understand this problem in front-end development.
-I might change the api encoding, the configuration is presently set for base64 encoding. It saved me a few lines of code doing this... I didn't need to call the btoa() function to encode to base64, and then to atob() to decode the string.  Atob() and btoa() is to decode and encode base64 only... atob() stands for ASCII to base64 and base64 to ASCII btoa(). For now this works, but ASCII is limited in producing certain characters to string however, an improvement is noted.
+I might change the api encoding, the configuration is presently set for base64 encoding. It saved me a few lines of code doing this... I didn't need to call the btoa() function to encode to base64, and then to atob() to decode the string. Atob() and btoa() is to decode and encode base64 only... atob() stands for ASCII to base64 and base64 to ASCII btoa(). For now this works, but ASCII is limited in producing certain characters to string however, an improvement is noted.
 
 ---
 
-## Authors and Acknowledgments
+## Authors
 
- - Made with :heart: by Nkenge Crowe (bluNite)
-- Trilogy 
+Made with :heart: by Nkenge Crowe (bluNite)
+
+### Acknowledgements
+
+- Professor Ron Erlih @Trilogy Columbia University Coding BootCamp Fu Foundation School of Engineering and Applied Science
 - James Quick https://github.com/jamesqquick
-Build a Quiz App https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript
-GitHub.com open-source quiz projects (open-source examples of quiz applications)
+  Build a Quiz App https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript
+  GitHub.com open-source quiz projects (open-source examples of quiz applications)
 
 ---
 
-## Contact Information:
+## Contact Information
 
-- GitHub Username: BluNite
-- GitHub Email: ncrowe175@gmail.com
+GitHub Username: BluNite
+GitHub Email:ncrowe175@gmail.com

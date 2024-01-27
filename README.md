@@ -24,7 +24,7 @@ A quiz application that uses the opentdb quiz api to generate multiple choice qu
   - [Tests](#tests)
   - [Challenges and Issue](#challenges-and-issue)
   - [Authors](#authors)
-    - [Acknowledgements](#acknowledgements)
+   - [Acknowledgements](#acknowledgements)
   - [Contact Information](#contact-information)
 
 ---
